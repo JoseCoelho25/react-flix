@@ -9,16 +9,16 @@ function NavBar() {
     <Navbar
   fluid={true}
   rounded={true}
-  className="bg-black"
+  className="bg-hero"
 >
   <Navbar.Brand >
     <img
       src={Logo}
-      className="mr-3 ml-3 h-6 sm:h-9"
+      className="mr-3 ml-3 h-6 sm:h-9 bg-black"
       alt="Logo"
     />
   </Navbar.Brand>
-  <div className="flex md:order-2 mr-4">
+  <div className="flex md:order-2 mr-4 bg-black">
     <Dropdown
       arrowIcon={false}
       inline={true}

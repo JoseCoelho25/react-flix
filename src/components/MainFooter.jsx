@@ -8,16 +8,19 @@ import { Link } from 'react-router-dom';
 import Logo from "../images/logo.png";
 
 function MainFooter() {
+
+ 
+
   return (
-    <Footer container={true}>
-  <div className="w-full">
+    <Footer container={true} className="bg-hero">
+  <div className="w-full ">
     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
       <div>
         <Footer.Brand
           href="#"
           src={Logo}
           alt="Logo"
-          name="The best copy in town!"
+          className="pl-4 bg-black"
         />
       </div>
       <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
@@ -63,18 +66,18 @@ function MainFooter() {
         by="Reactflix™"
         year={2023}
       />
-      <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+      <div className="mt-4 mr-8 flex space-x-6 sm:mt-0 sm:justify-center">
         <Link to="#">
-          <img src={BsFacebook} alt="facebook"  className="h-8"/>
+          <img src={BsFacebook} alt="facebook"  className="h-8 bg-white"/>
         </Link>
         <Link to="#">
-          <img src={BsTwitter} alt="twitter" className="h-8" />
+          <img src={BsTwitter} alt="twitter" className="h-8 bg-white" />
         </Link>
         <Link to="#">
-          <img src={BsGithub} alt="github" className="h-8" />
+          <img src={BsGithub} alt="github" className="h-8 bg-white" />
         </Link>
         <Link to="#">
-          <img src={BsInstagram} alt="instagram" className="h-8" />
+          <img src={BsInstagram} alt="instagram" className="h-8 bg-white" />
         </Link>
       </div>
     </div>
