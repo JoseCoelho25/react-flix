@@ -9,7 +9,7 @@ function NavBar() {
     <Navbar
   fluid={true}
   rounded={true}
-  className="bg-hero"
+  className="bg-hero mt-6"
 >
   <Navbar.Brand >
     <img
