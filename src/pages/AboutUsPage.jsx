@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../layouts/MainLayout'
 
 function AboutUsPage() {
   return (
-    <div>AboutUsPage</div>
+    <MainLayout>
+      <div>AboutUsPage</div>
+    </MainLayout>
   )
 }
 

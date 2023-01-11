@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../layouts/MainLayout'
 
 function SeriesPage() {
   return (
-    <div>SeriesPage</div>
+    <MainLayout>
+      <div>SeriesPage</div>
+    </MainLayout>
   )
 }
 
