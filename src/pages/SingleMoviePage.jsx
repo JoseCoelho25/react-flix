@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from "../data/movies.json";
 import MainLayout from '../layouts/MainLayout';
@@ -12,10 +12,8 @@ function SingleMoviePage() {
 
   const movieData = data.find((e)=>e.slug === slugs);
 
-  let test = movieData.ratings
-  console.log(test.length)
-  const x = movieData.ratings[test.length]
-  console.log(x)
+
+  // video check
   const hasVideoId = movieData.youTubeTrailerId !== null;
 
   return (
@@ -34,25 +32,30 @@ function SingleMoviePage() {
               <div className="flex">
                 <img src={calendar} alt="calendar"  />
                 <div>{movieData.releaseDate}</div>
-              </div>             
+              </div>
           </div>
           <div className="text-xl text-gray-400">{movieData.description}</div>
-          <div className="flex w-2/3 mt-6">
-            <div className="mr-8">
+          <div className="flex w-full mt-6">
+            <div className="">
               <div className="text-gray-400">Director</div>
               <div>{movieData.director}</div>
             </div>
-            <div>
+            <div className="ml-12">
               <div className="text-gray-400">Cast</div>
               <div>{movieData.actors}</div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
       {/* film section */}
-      <div className="flex">
-        <div></div>
-        <div></div>
+      <div className="flex container mx-auto m-16 bg-gradient-to-r from-slate-900  to-gray-800 rounded-l p-2 w-full">
+      {movieData.ratings.map((movie)=>(
+        <div className=" text-white grid grid-cols-2 w-1/4 text-center ml-4 ">
+          <div className="py-4">{movie.source}</div>
+          <div className="font-bold py-4">🌟{movie.value}</div>
+        </div>
+      ))}
+        <input type="button" value="VER FILME" className="text-red-900 font-bold text-6xl flex w-full justify-center pb-2" />
       </div>
       {/* trailer section */}
       {hasVideoId && (
@@ -72,9 +75,9 @@ function SingleMoviePage() {
         </div>
       )}
       {!hasVideoId && <div className="text-white text-2xl ml-16 mb-10">Nao existe trailer disponivel!</div>}
-       
+
     </MainLayout>
-    
+
   )
 }
 

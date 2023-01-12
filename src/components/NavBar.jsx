@@ -54,8 +54,8 @@ function NavBar() {
     >
       Movies
     </Link>
-    <Link to="/series" className="text-white text-xl hover:text-blue-500">
-      Series
+    <Link to="/categories" className="text-white text-xl hover:text-blue-500">
+      Categories
     </Link>
     <Link to="/about" className="text-white text-xl hover:text-blue-500">
       AboutUs

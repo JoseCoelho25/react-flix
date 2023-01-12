@@ -1,7 +1,7 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
 
-function SeriesPage() {
+function CategoriesPage() {
   return (
     <MainLayout>
       <div>SeriesPage</div>
@@ -9,4 +9,4 @@ function SeriesPage() {
   )
 }
 
-export default SeriesPage
+export default CategoriesPage
