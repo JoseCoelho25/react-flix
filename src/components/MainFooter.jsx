@@ -13,7 +13,7 @@ function MainFooter() {
 
   return (
     <Footer container={true} className="bg-hero">
-  <div className="w-full ">
+  <div className="w-full">
     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
       <div>
         <Footer.Brand
@@ -23,7 +23,7 @@ function MainFooter() {
           className="pl-4 bg-black"
         />
       </div>
-      <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+      <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 pr-16">
         <div>
           <Footer.Title title="about" />
           <Footer.LinkGroup col={true}>
@@ -66,7 +66,7 @@ function MainFooter() {
         by="Reactflix™"
         year={2023}
       />
-      <div className="mt-4 mr-8 flex space-x-6 sm:mt-0 sm:justify-center">
+      <div className="mt-4 mr-8 flex space-x-12 sm:mt-0 sm:justify-center pr-32">
         <Link to="#">
           <img src={BsFacebook} alt="facebook"  className="h-8 bg-white"/>
         </Link>
