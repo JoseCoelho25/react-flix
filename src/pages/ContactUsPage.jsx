@@ -26,6 +26,7 @@ const validate = values => {
     errors.email = 'Invalid email address';
   }
 
+
   return errors;
 };
 
@@ -44,7 +45,7 @@ const AboutUsPage = () => {
   return (
     <MainLayout>
         <div className="mt-20 mb-20 container mx-auto w-1/2">
-            <p className="sm:text-3xl text-2xl font-semibold text-center text-sky-600  mb-4">Leave any film requests or suggestions you might have!</p>
+            <p className="sm:text-3xl text-2xl font-semibold text-center text-red-700  mb-4">Leave any film requests or suggestions you might have!</p>
         <form onSubmit={formik.handleSubmit} >
           <label htmlFor="firstName">First Name</label>
           <input
@@ -94,11 +95,11 @@ const AboutUsPage = () => {
             onBlur={formik.handleBlur}
             value={formik.values.request}
             placeholder="Movie Request"
-            className="focus:outline-none border-b w-full my-2 border-sky-400 placeholder-gray-500 h-48"
+            className="focus:outline-none border-b w-full my-2 border-sky-400 placeholder-gray-500 h-48 pb-40"
           />
-          {formik.errors.lastName ? <div className="text-red-700">{formik.errors.lastName}</div> : null}
+          
 
-          <button type="submit" className=" rounded-full  p-3 w-full xl:w-56   bg-blue-400 text-black text-lg font-semibold mt-4">Submit</button>
+          <button type="submit" className=" rounded-full  p-3 w-full xl:w-56   bg-red-700 text-black text-lg font-semibold mt-4">Submit</button>
         </form>
         </div>
     </MainLayout>
