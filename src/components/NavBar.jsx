@@ -12,11 +12,13 @@ function NavBar() {
   className="bg-hero mt-6"
 >
   <Navbar.Brand >
+    <Link to="/">
     <img
       src={Logo}
       className="mr-3 ml-3 h-6 sm:h-9 bg-black"
       alt="Logo"
     />
+    </Link>
   </Navbar.Brand>
   <div className="flex md:order-2 mr-4 bg-black">
     <Dropdown

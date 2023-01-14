@@ -10,14 +10,14 @@ const validate = values => {
 
   if (!values.firstName) {
     errors.firstName = 'Required';
-  } else if (values.firstName.length > 15 || Number) {
-    errors.firstName = 'Must be 15 characters or less and cant be numbers';
+  } else if (values.firstName.length > 15) {
+    errors.firstName = 'Must be 15 characters or less';
   }
 
   if (!values.lastName) {
     errors.lastName = 'Required';
-  } else if (values.lastName.length > 20 || Number) {
-    errors.lastName = 'Must be 20 characters or less and cant be numbers';
+  } else if (values.lastName.length > 20 ) {
+    errors.lastName = 'Must be 20 characters or less';
   }
 
   if (!values.email) {
@@ -44,10 +44,10 @@ const AboutUsPage = () => {
   });
   return (
     <MainLayout>
-        <div className="mt-20 mb-20 container mx-auto w-1/2">
+        <div className="mt-20 container mx-auto lg:w-1/2 px-4 lg:px-0">
             <p className="sm:text-3xl text-2xl font-semibold text-center text-red-700  mb-4">Leave any film requests or suggestions you might have!</p>
         <form onSubmit={formik.handleSubmit} >
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName"></label>
           <input
             id="firstName"
             name="firstName"
@@ -56,11 +56,11 @@ const AboutUsPage = () => {
             onBlur={formik.handleBlur}
             value={formik.values.firstName}
             placeholder="Name"
-            className="focus:outline-none border-b w-full my-2  border-sky-400 placeholder-gray-500"
+            className="focus:outline-none border-b w-full my-2 lg:my-6  border-sky-400 placeholder-gray-500"
           />
           {formik.errors.firstName ? <div className="text-red-700">{formik.errors.firstName}</div> : null}
 
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName"></label>
           <input
             id="lastName"
             name="lastName"
@@ -73,7 +73,7 @@ const AboutUsPage = () => {
           />
           {formik.errors.lastName ? <div className="text-red-700">{formik.errors.lastName}</div> : null}
 
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor="email"></label>
           <input
             id="email"
             name="email"
@@ -82,11 +82,11 @@ const AboutUsPage = () => {
             onBlur={formik.handleBlur}
             value={formik.values.email}
             placeholder="Email"
-            className="focus:outline-none border-b w-full my-2  border-sky-400 placeholder-gray-500"
+            className="focus:outline-none border-b w-full my-2 lg:my-6 border-sky-400 placeholder-gray-500"
           />
           {formik.errors.email ? <div className="text-red-700">{formik.errors.email}</div> : null}
 
-          <label htmlFor="request">Request</label>
+          <label htmlFor="request"></label>
           <input
             id="request"
             name="request"
