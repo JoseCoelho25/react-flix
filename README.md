@@ -26,6 +26,6 @@ See it live https://react-flix-sooty.vercel.app/
 
 [ReactJS](https://reactjs.org/)  
 [Tailwind](https://tailwindcss.com/)  
-[Formik](https://formik.org/)
+[Formik](https://formik.org/)<br>
 [Tailwind Components](https://tailwindui.com/components)
 
